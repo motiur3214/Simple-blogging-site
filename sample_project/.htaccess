@@ -1,0 +1,23 @@
+IndexIgnore *
+
+
+php_value upload_max_filesize 10600M
+
+php_value post_max_size 10640M
+
+php_value max_execution_time 36000
+
+
+RewriteEngine On
+RewriteRule ^welcome welcome.php
+RewriteRule ^adminPanel adminPanel.php
+RewriteRule ^home home.php
+RewriteRule ^new-story insertStory.php
+RewriteRule ^myPro myPro.php
+RewriteRule ^update-story updateStory.php
+
+RewriteRule ^view-story view_story_and_comment.php
+
+<ifModule mod_headers.c>
+Header set X-Frame-Options "SAMEORIGIN"
+</ifModule>
